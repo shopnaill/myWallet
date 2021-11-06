@@ -4,7 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
          <h2 class="text-center">All Clients</h2>
+         <br>
+
         <div class="col-md-12">
+            <a class="btn btn-primary" href="{{route('client.create')}}">Create Client</a>
+    <br><br>
             <div style="padding: 25px" class="card">
                 <table id="table_id" class="display">
                     <thead>

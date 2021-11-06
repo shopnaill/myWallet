@@ -22,6 +22,19 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="purchase" class="col-md-4 col-form-label text-md-right">{{ __('Purchase Type') }}</label>
+
+                            <div class="col-md-6">
+                              <select class="form-control" name="purchase" id="purchase">
+                                  @foreach ($purchase_type as $item)
+                                       <option value="{{$item->id}}">{{$item->name}}</option>
+                                  @endforeach
+                              </select>
+                             
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('Info') }}</label>
 
                             <div class="col-md-6">

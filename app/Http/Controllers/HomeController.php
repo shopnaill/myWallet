@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Balance;
 use App\Models\User;
 use App\Models\Wallet;
+use App\Models\Upcoming;
 use Auth;
 
 class HomeController extends Controller
@@ -29,9 +30,10 @@ class HomeController extends Controller
     public function index()
     {
         $projects = Project::count();
-        $balances = Balance::get();
+        $balances = Balance::orderBy('date', 'ASC')->get();
         $wallet = Wallet::where('user_id',Auth::user()->id)->get();
         $clients  = User::where('id','<>',1)->count();
+        $upcoming  = Upcoming::where('user_id',Auth::user()->id)->whereNull('state')->get();
         $my_balance = 0;
         $my_wallet = 0;
 
@@ -54,12 +56,8 @@ class HomeController extends Controller
         {
  
                 $my_balance = $my_balance += $balance->price;
- 
- 
-
-
         }
 
-        return view('home',compact('projects','my_balance','clients','my_wallet'));
+        return view('home',compact('projects','my_balance','clients','my_wallet','balances','upcoming'));
     }
 }

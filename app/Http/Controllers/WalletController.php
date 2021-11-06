@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Wallet;
+use App\Models\PurchaseType;
 use Auth;
 
 class WalletController extends Controller
@@ -26,6 +27,7 @@ class WalletController extends Controller
     public function withdraw()
     {
         $wallet = Wallet::where('user_id',Auth::user()->id)->get();
+        $purchase_type = PurchaseType::get();
         $my_wallet = 0;
 
         foreach ($wallet as $w)
@@ -43,7 +45,7 @@ class WalletController extends Controller
 
         }
 
-         return view('wallet.withdraw' ,compact('my_wallet'));
+         return view('wallet.withdraw' ,compact('my_wallet','purchase_type'));
     }
 
 
