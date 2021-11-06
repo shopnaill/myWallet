@@ -2,16 +2,18 @@
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="card mb-3 border-0 rounded-0 gradient-success">
             <div class="card-body">
-                <div class="media">
-                    <div class="media-body">
-                        <h2 class="f-light">{{$projects}}</h2>
-                        <p class="mb-0">Projects</p>
-                    </div>
-                    <span class="icon fa fa-check-circle"></span>
-                </div>
-                <div class="progress progress-sm rounded-0 light mt-3">
-                    <div class="progress-bar bg-white" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+                    <a href="{{route('projects')}}">
+                        <div class="media">
+                            <div class="media-body">
+                                <h2 class="f-light">{{$projects}}</h2>
+                                <p class="mb-0">Projects</p>
+                            </div>
+                            <span class="icon fa fa-check-circle"></span>
+                        </div>
+                        <div class="progress progress-sm rounded-0 light mt-3">
+                            <div class="progress-bar bg-white" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </a>
             </div>
         </div>
     </div>
@@ -34,6 +36,7 @@
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
         <div class="card mb-3 border-0 rounded-0 gradient-warning">
             <div class="card-body">
+                <a href="{{route('clients')}}">
                 <div class="media">
                     <div class="media-body">
                         <h2 class="f-light">{{$clients}}</h2>
@@ -44,6 +47,7 @@
                 <div class="progress progress-sm rounded-0 light mt-3">
                     <div class="progress-bar bg-white" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                </a>
             </div>
         </div>
     </div>

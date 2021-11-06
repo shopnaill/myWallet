@@ -2,7 +2,7 @@
     <div class="card rounded-0 border-0">
         <div class="card-header">
             <h4 class="card-title d-inline-block">Upcoming Actions</h4> 
-            <button data-toggle="modal" data-target="#AddUpcoming" class="btn btn-success float-right">View all</button>
+            <button data-toggle="modal" data-target="#AddUpcoming" class="btn btn-success float-right">Add new</button>
         </div>
         <div class="card-body p-0">
             <table class="table mb-0 footable footable-1 breakpoint-lg" style="">

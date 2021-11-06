@@ -29,7 +29,7 @@
 <body>
     <div id="app">
         <div class="loader-logo" style="display: none;">
-            <img src="{{asset('imgs/logo.png')}}" alt="bootstrap template design by maxartkiller">
+            <img src="{{asset('imgs/logo-up.png')}}" alt="">
             <br>
             <div class="loader-ellipsis">
                 <div></div>
@@ -38,9 +38,12 @@
                 <div></div>
             </div>
         </div>
-        <div class="wrapper" style="padding-top: 61px;">
+        <div class="wrapper"  >
+            @if (!isset($nav))
             @include('layouts.navbar')
             @include('layouts.sidebar')
+            @endif
+        
                 @yield('content')
             @include('layouts.sideoption')
         </div>

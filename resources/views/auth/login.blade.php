@@ -1,3 +1,6 @@
+@php
+    $nav = false;
+@endphp
 @extends('layouts.app')
 
 @section('content')

@@ -11,7 +11,7 @@ $(document).ready(function () {
 	if (mainbody.hasClass('boxed-page') === true) {
 		$('.wrapper').css('min-height', ($(window).outerHeight() - 40 - $('footer').outerHeight()));
 	}
-    $('body .wrapper').css('padding-top', ($('body .wrapper > header').outerHeight()) );
+  //  $('body .wrapper').css('padding-top', ($('body .wrapper > header').outerHeight()) );
 	$('.vh-100').css('min-height', $(window).outerHeight() - $('footer').outerHeight());
 	$('.vhi-100').css('height', ($(window).outerHeight() - ($('footer > div').outerHeight()+25) - $('.wrapper > header').outerHeight() -$('.wrapper > header').outerHeight()));
 	$('.vhinner-100').css('height', ($(window).outerHeight() - ($('footer > div').outerHeight()+25)- $('.wrapper > header').outerHeight()));

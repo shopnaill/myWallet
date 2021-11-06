@@ -2,11 +2,11 @@
 		<header class="border-bottom">
 			<!-- Fixed navbar -->
 			<nav class="navbar navbar-expand-sm ">
-				<a class="navbar-brand" href="#/website/boothelp/html/boothelp/dashboard.html#">
-					<img src="{{asset('imgs/logo.png')}}" alt="">
+				<a class="navbar-brand" href="/">
+					<img src="{{asset('imgs/logo-up.png')}}" alt="">
 					<h5 class="text-uppercase visible-md">
-						<span>Bootstrap</span>
-						<small>BootHelp <i class="fa fa-circle text-danger"></i> Design</small>
+						<span>Wallet</span>
+						<small>Upkareno</small>
 					</h5>
 				</a>
 				<button class="btn btn-link menu-btn sq-btn rounded-0 border-right" type="button" id="sidebar-left">
@@ -146,7 +146,7 @@
 						<div class="dropdown float-left">
 							<a href="#/website/boothelp/html/boothelp/dashboard.html#" class="btn btn-link text-dark user-profile invisible-sm">
 								<figure class="avatar30 rounded-circle m-0">
-									<img src="{{asset('imgs/user1.png')}}" alt="">
+									<img src="{{asset('imgs/me1.png')}}" alt="">
 								</figure>								
 							</a>
 							<button class="btn btn-secondary sq-btn rounded-0 dropdown-toggle float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">

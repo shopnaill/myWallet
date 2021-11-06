@@ -52,10 +52,11 @@ class UpcomingController extends Controller
  
                 </h5>
              </td>
-            <td style="display: table-cell;"><span class="badge badge-info"><i class="icon fa fa-calendar"></i> {{$come->start_at}}</span></td>
+            <td style="display: table-cell;"><span class="badge badge-info"><i class="icon fa fa-calendar"></i>' . $come->start_at . '</span></td>
             <td class="footable-last-visible" style="display: table-cell;">
                 <form action="' . route('upcoming.save_up') . '" method="post">
-                    @csrf
+                <input type="hidden" name="_token" value="' . csrf_token() . '">
+                    
                     <input type="hidden" value="'  . $come->amount . '" name="amount">
                     <input type="hidden" value=" ' . $come->info . ' " name="info">
                     <input type="hidden" value=" ' . $come->type . '" name="type">
@@ -63,8 +64,8 @@ class UpcomingController extends Controller
                     <input id="save_' . $come->id . '" type="submit" style="display: none;" value="">
                 </form>
                 <form action="'.route('upcoming.delete') .'" method="post">
-                    @csrf
-                    <input type="hidden" value="' . $come->id . '" name="id">
+                <input type="hidden" name="_token" value="' . csrf_token() . '">
+                <input type="hidden" value="' . $come->id . '" name="id">
                     <input id="delete_' .$come->id . '" type="submit" style="display: none;" value="">
                 </form>
                 <label style=" right: 75px; " for="delete_' . $come->id . '" class="btn btn-danger btn-sm c-btn"><i class="fa fa-times"></i></label>
