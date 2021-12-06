@@ -11,6 +11,6 @@ class Wallet extends Model
 
     public function pr_type()
     {
-        return $this->belongsTo(PurchaseType::class, 'id', 'p_type');
+        return $this->belongsTo(PurchaseType::class, 'p_type', 'id');
     }
 }
