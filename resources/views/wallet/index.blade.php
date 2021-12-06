@@ -33,6 +33,7 @@
                             <th>Date</th>
                             <th>Info</th>
                             <th>Amount</th>
+                            <th>Name</th>
                             <th>Type</th>
                          </tr>
                     </thead>
@@ -48,6 +49,7 @@
                                  <span style="color: red;font-weight: bold;">-{{$w->amount}}</span>
                                 @endif 
                                 </td>
+                            <td>{{$w->type->name}}</td>
                             <td>
                                 @if ($w->type == null)
                                 <span style="color: green;font-weight: bold;">{{"Addation"}}</span>
