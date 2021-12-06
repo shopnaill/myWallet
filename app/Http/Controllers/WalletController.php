@@ -70,6 +70,7 @@ class WalletController extends Controller
         $wallet->amount = $request->amount;
         $wallet->info = $request->info;
         $wallet->type =  1;
+        $wallet->p_type = $request->p_type;
         $wallet->user_id  = Auth::user()->id;
 
         $wallet->save();
