@@ -49,7 +49,7 @@
                                  <span style="color: red;font-weight: bold;">-{{$w->amount}}</span>
                                 @endif 
                                 </td>
-                            <td>{{$w->p_type ? $w->p_type->id : 0}}</td>
+                            <td>{{$w->p_type ? $w->pr_type->id : 0}}</td>
                             <td>
                                 @if ($w->type == null)
                                 <span style="color: green;font-weight: bold;">{{"Addation"}}</span>

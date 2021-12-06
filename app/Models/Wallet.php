@@ -9,7 +9,7 @@ class Wallet extends Model
 {
     use HasFactory;
 
-    public function p_type()
+    public function pr_type()
     {
         return $this->belongsTo(PurchaseType::class, 'id', 'p_type');
     }
