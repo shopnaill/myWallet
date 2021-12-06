@@ -28,7 +28,7 @@
                     <label for="purchase" class="col-md-4 col-form-label text-md-right">{{ __('Purchase Type') }}</label>
 
                     <div class="col-md-6">
-                      <select class="form-control" name="purchase" id="purchase">
+                      <select class="form-control" name="p_type" id="purchase">
                           @foreach ($purchase_type as $item)
                                <option value="{{$item->id}}">{{$item->name}}</option>
                           @endforeach
