@@ -14,8 +14,5 @@ class Balance extends Model
         return $this->belongsTo(Project::class, 'project_id');
     }
 
-    public function p_type()
-    {
-        return $this->belongsTo(PurchaseType::class, 'type');
-    }
+
 }
